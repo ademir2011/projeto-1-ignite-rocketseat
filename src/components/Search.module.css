@@ -1,0 +1,42 @@
+.wrapper {
+    margin-top: -1.7rem;
+    display: flex;
+
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.searchInput {
+    width: 39.87rem;
+    height: 3.375rem;
+    border-radius: 8px;
+    background: var(--gray-500);
+    color: var(--gray-300);
+    padding-left: 1rem;
+
+    border: 1px solid var(--gray-700);
+}
+
+.searchButton>span {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.searchButton {
+    width: 5.625rem;
+    height: 3.25rem;
+    border-radius: 8px;
+    background: var(--blue-dark);
+    color: var(--gray-100);
+    cursor: pointer;
+
+    gap: 0.4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonIcon {
+    line-height: 0;
+}
