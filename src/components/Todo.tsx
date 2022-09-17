@@ -15,7 +15,7 @@ export function Todo() {
         <div className={styles.wrapper}>
             <header className={styles.topHeader}>
                 <div className={styles.createdTodo}>
-                    <span className={styles.createdTodoText}>Tarefas Criadas</span>
+                    <span className={styles.createdTodoText}>Tarefas criadas</span>
                     <span className={styles.badge}>5</span>
                 </div>
                 <div className={styles.finishTodo}>

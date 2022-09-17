@@ -11,9 +11,7 @@ export function Card({ title }: CardInfo) {
         <div className={styles.card}>
             <input className={styles.cb} type="checkbox" />
             <span className={styles.cardText}>{title}</span>
-            <span className={styles.trashIcon}>
-                <Trash size={24} />
-            </span>
+            <Trash className={styles.trashIcon} />
         </div>
     );
 
