@@ -4,11 +4,23 @@ import { Card } from './Card';
 export function Todo() {
 
     const elements = [
-        { title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' },
-        { title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' },
-        { title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' },
-        { title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' },
-        { title: 'Integer urna interturpis turpis semper. Duis vel sed fames integer.' }
+        {
+            title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+            checked: true
+        },
+        {
+            title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+            checked: false
+        },
+        {
+            title: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+            checked: false
+        },
+        {
+            title: 'Inro auctor neque turpis turpis seis vel sed fames integer.',
+            checked: false
+        }
+
     ];
 
     return (
@@ -26,7 +38,7 @@ export function Todo() {
             {
                 elements.map((element) => {
                     return (
-                        <Card title={element.title} />
+                        <Card title={element.title} checked={element.checked} />
                     );
                 })
             }

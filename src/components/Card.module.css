@@ -51,5 +51,11 @@
     width: 100%;
     color: var(--gray-100);
     font-size: 0.875rem;
-    font-weight: normal;
+}
+
+.cardTextChecked {
+    width: 100%;
+    color: var(--gray-300);
+    font-size: 0.875rem;
+    text-decoration: line-through;
 }
