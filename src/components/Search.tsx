@@ -1,21 +1,30 @@
 import styles from './Search.module.css';
 import { PlusCircle } from 'phosphor-react';
+import { FormEventHandler, useState } from 'react';
 
-export function Search() {
+interface myProps {
+    handlerSearchSubmit: FormEventHandler
+}
+export function Search({ handlerSearchSubmit }: myProps) {
+
     return (
-        <div className={styles.wrapper} >
-            <input
-                className={styles.searchInput}
-                placeholder="Adicionar uma nova tarefa"
-            />
-            <button className={styles.searchButton}>
-                <span>
-                    Criar
-                </span>
-                <span className={styles.buttonIcon}>
-                    <PlusCircle size={15.97} />
-                </span>
-            </button>
-        </div>
+        <form onSubmit={handlerSearchSubmit}>
+            <div className={styles.wrapper} >
+                <input
+                    name="todo"
+                    className={styles.searchInput}
+                    placeholder="Adicionar uma nova tarefa"
+                />
+                <button className={styles.searchButton}>
+                    <span>
+                        Criar
+                    </span>
+                    <span className={styles.buttonIcon}>
+                        <PlusCircle size={15.97} />
+                    </span>
+                </button>
+            </div>
+        </form>
+
     );
 }
