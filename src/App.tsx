@@ -23,7 +23,6 @@ export function App() {
 
   function handlerSearchSubmit() {
     event?.preventDefault();
-    console.log(event.target.todo.value);
     const newElementList = [...elementList, { id: (Math.floor(Math.random() * 123123)), title: event.target.todo.value, checked: false }];
     setElements(newElementList);
   }
@@ -40,6 +39,12 @@ export function App() {
     setElements(newElements);
   }
 
+  function handlerDelete(id: number) {
+    const newElements = elementList.filter((element) => element.id != id);
+
+    setElements(newElements);
+  }
+
   return (
     <div>
       <Header />
@@ -50,6 +55,7 @@ export function App() {
           totalElements={elementList.length}
           amountFinish={elementList.filter(e => e.checked).length}
           handlerCbChange={handlerCbChange}
+          handlerDelete={handlerDelete}
         />
       </main>
     </div>

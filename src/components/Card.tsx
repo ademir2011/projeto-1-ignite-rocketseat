@@ -7,9 +7,10 @@ interface myProps {
     title: string,
     checked: boolean
     handlerCbChange: ChangeEventHandler,
+    handlerDelete: Function,
 }
 
-export function Card({ id, title, checked, handlerCbChange }: myProps) {
+export function Card({ id, title, checked, handlerCbChange, handlerDelete }: myProps) {
 
     return (
         <div className={styles.card}>
@@ -21,7 +22,7 @@ export function Card({ id, title, checked, handlerCbChange }: myProps) {
                 name={id.toString()}
             />
             <span className={checked ? styles.cardTextChecked : styles.cardText}>{title}</span>
-            <Trash className={styles.trashIcon} />
+            <Trash className={styles.trashIcon} type='submit' onClick={() => handlerDelete(id)} />
         </div>
     );
 

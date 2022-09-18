@@ -7,6 +7,7 @@ interface myProps {
     totalElements: number,
     amountFinish: number,
     handlerCbChange: ChangeEventHandler
+    handlerDelete: Function
 }
 
 interface Element {
@@ -15,7 +16,7 @@ interface Element {
     checked: boolean
 }
 
-export function Todo({ elements, totalElements, amountFinish, handlerCbChange }: myProps) {
+export function Todo({ elements, totalElements, amountFinish, handlerCbChange, handlerDelete }: myProps) {
 
     return (
         <div className={styles.wrapper}>
@@ -37,6 +38,7 @@ export function Todo({ elements, totalElements, amountFinish, handlerCbChange }:
                             title={element.title}
                             checked={element.checked}
                             handlerCbChange={handlerCbChange}
+                            handlerDelete={handlerDelete}
                         />
                     );
                 })
